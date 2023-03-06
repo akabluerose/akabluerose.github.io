@@ -1,8 +1,9 @@
 import React from "react";
 import './links.css'
+import {Link} from "./Link";
 
-export const Links: React.FC<any> = ({children}) => {
+export const Links = () => {
   return <div className={"links-container"}>
-    {children}
+    <Link service={"apple"} text={"Apple Music"}/>
   </div>
 }

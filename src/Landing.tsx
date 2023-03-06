@@ -6,12 +6,6 @@ import {Link} from "./Link";
 
 export const Landing = () => {
   return <div className={"page"}>
-    <Links>
-      <Link/>
-      <Link/>
-      <Link/>
-      {/*<Youtube/>*/}
-      {/*<Spotify/>*/}
-    </Links>
+    <Links/>
   </div>
 }

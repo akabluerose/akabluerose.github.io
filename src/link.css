@@ -1,0 +1,43 @@
+.link-container {
+  position: relative;
+  width: 32rem;
+  height: 4rem;
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  border: 2px solid var(--highlight-color);
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+
+.link-container:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 4rem var(--highlight-color);
+}
+
+.link-container:hover:after {
+  content: url(apple-music.png);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  animation: apple-music-fade 1s forwards;
+}
+
+@keyframes apple-music-fade {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-1rem, -1rem);
+    opacity: 75%;
+  }
+
+  100% {
+    transform: translate(-2rem, -3rem);
+    opacity: 0;
+  }
+}

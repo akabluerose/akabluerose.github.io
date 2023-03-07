@@ -7,5 +7,6 @@ export const Links = () => {
     <Link service={"apple"} text={"Apple Music"}/>
     <Link service={"spotify"} text={"Spotify"}/>
     <Link service={"youtube"} text={"Youtube"}/>
+    <Link service={"latest"} text={"\"No Molestar\" ft. La Maldad"}/>
   </div>
 }

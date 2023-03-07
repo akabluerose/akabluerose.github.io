@@ -1,5 +1,5 @@
-import AvatarIcon from './assets/avatar.jpeg'
-import './avatar.css'
+import AvatarIcon from '../../assets/avatar.jpeg'
+import './avatar.scss'
 
 export const Avatar = () => {
   return (

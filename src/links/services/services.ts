@@ -1,6 +1,6 @@
-import AppleMusicIcon from "./assets/apple-music.png";
-import SpotifyIcon from "./assets/spotify.png";
-import YoutubeIcon from "./assets/youtube.png";
+import AppleMusicIcon from "../../assets/apple-music.png";
+import SpotifyIcon from "../../assets/spotify.png";
+import YoutubeIcon from "../../assets/youtube.png";
 
 const APPLE_SERVICE = 'apple'
 const SPOTIFY_SERVICE = 'spotify'

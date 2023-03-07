@@ -1,7 +1,7 @@
-import './link.css'
+import './link.scss'
 import React, {useCallback, useEffect} from "react";
 import {animated, useSpring} from '@react-spring/web';
-import {Service, useService} from "./services";
+import {Service, useService} from "./services/services";
 
 export interface LinkProps {
   text: string

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {LinksPage} from "./LinksPage";
+import {LinksPage} from "./links/page/LinksPage";
 import {
   createBrowserRouter,
   RouterProvider,

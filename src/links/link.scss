@@ -1,4 +1,7 @@
 .link-container {
+  @media (max-width: 525px) {
+    width: 75%;
+  }
   position: relative;
   width: 32rem;
   height: 4rem;

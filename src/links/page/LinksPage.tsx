@@ -1,8 +1,8 @@
 import './links-page.css'
-import './vars.css'
+import '../../vars.css'
 import React from "react";
-import {Links} from "./Links";
-import {Avatar} from "./Avatar";
+import {Links} from "../Links";
+import {Avatar} from "../avatar/Avatar";
 
 export const LinksPage = () => {
   return <div className={"page"}>

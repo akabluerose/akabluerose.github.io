@@ -1,10 +1,14 @@
 import './link.css'
 import React, {useCallback, useEffect} from "react";
-import AppleMusicIcon from './apple-music.png'
+import AppleMusicIcon from './assets/apple-music.png'
+import SpotifyIcon from './assets/spotify.png'
+import YoutubeIcon from './assets/youtube.png'
 import {animated, useSpring} from '@react-spring/web';
 
 const APPLE_SERVICE = 'apple'
-type Service = typeof APPLE_SERVICE
+const SPOTIFY_SERVICE = 'spotify'
+const YOUTUBE_SERVICE = 'youtube'
+type Service = typeof APPLE_SERVICE | typeof SPOTIFY_SERVICE | typeof YOUTUBE_SERVICE
 
 export interface LinkProps {
   text: string
@@ -12,7 +16,9 @@ export interface LinkProps {
 }
 
 const serviceIcons: Map<Service, string> = new Map([
-  ['apple', AppleMusicIcon]
+  ['apple', AppleMusicIcon],
+  ['spotify', SpotifyIcon],
+  ['youtube', YoutubeIcon],
 ])
 
 export const Link: React.FC<LinkProps> = ({text, service}) => {
@@ -45,6 +51,6 @@ export const Link: React.FC<LinkProps> = ({text, service}) => {
 
   return (<div className={"link-container"} onMouseEnter={() => triggerAnimation()}>
     {text}
-    <animated.img src={serviceIcon} style={iconStyle}/>
+    <animated.img src={serviceIcon} style={iconStyle} className={"link-icon"}/>
   </div>)
 }

@@ -16,3 +16,7 @@
   background-color: var(--primary-color);
   box-shadow: 0 0 4rem var(--highlight-color);
 }
+
+.link-icon {
+  margin-left: 0.5rem;
+}

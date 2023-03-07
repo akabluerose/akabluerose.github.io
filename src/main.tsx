@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {Landing} from "./Landing";
+import {LinksPage} from "./LinksPage";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Landing/>
+    <LinksPage/>
   </React.StrictMode>,
 )

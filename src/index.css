@@ -1,17 +1,15 @@
 body {
   margin: 0;
-  background-color: #010326;
+  background-image: linear-gradient(to right, #160042 0%, #12107a 30%, #071228 100%);
   color: #d1e3ef;
-  font-family: 'Open Sans';
+  font-family: "Raleway", "Helvetica", sans-serif;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/assets/raleway.ttf")
 }
 
 #root {
   height: 100vh;
 }
-
-/* #010326
-   #0420BF
-   #020F59
-   #032CA6
-   #1D8FF2
- */

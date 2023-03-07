@@ -1,31 +1,21 @@
 import './link.css'
 import React, {useCallback, useEffect} from "react";
-import AppleMusicIcon from './assets/apple-music.png'
-import SpotifyIcon from './assets/spotify.png'
-import YoutubeIcon from './assets/youtube.png'
 import {animated, useSpring} from '@react-spring/web';
-
-const APPLE_SERVICE = 'apple'
-const SPOTIFY_SERVICE = 'spotify'
-const YOUTUBE_SERVICE = 'youtube'
-type Service = typeof APPLE_SERVICE | typeof SPOTIFY_SERVICE | typeof YOUTUBE_SERVICE
+import {Service, useService} from "./services";
 
 export interface LinkProps {
   text: string
   service: Service
 }
 
-const serviceIcons: Map<Service, string> = new Map([
-  ['apple', AppleMusicIcon],
-  ['spotify', SpotifyIcon],
-  ['youtube', YoutubeIcon],
-])
-
 export const Link: React.FC<LinkProps> = ({text, service}) => {
-  const serviceIcon = serviceIcons.get(service)
+  const serviceProps = useService(service)
   const [isAnimated, setIsAnimated] = React.useState(false)
   const triggerAnimation = useCallback(() => {
     setIsAnimated(true)
+  }, [])
+  const redirectToService = useCallback(() => {
+    window.open(serviceProps.link, '_blank')
   }, [])
   const iconStyle = useSpring({
     transform: isAnimated ? `rotate(30deg) scale(1.1)` : `rotate(0deg) scale(1)`,
@@ -49,8 +39,10 @@ export const Link: React.FC<LinkProps> = ({text, service}) => {
     }
   }, [isAnimated])
 
-  return (<div className={"link-container"} onMouseEnter={() => triggerAnimation()}>
-    {text}
-    <animated.img src={serviceIcon} style={iconStyle} className={"link-icon"}/>
-  </div>)
+  return (
+      <button className={"link-container"} onMouseEnter={triggerAnimation}
+              onClick={redirectToService}>
+        {text}
+        <animated.img src={serviceProps.icon} style={iconStyle} className={"link-icon"}/>
+      </button>)
 }

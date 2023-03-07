@@ -41,6 +41,7 @@ export const Link: React.FC<LinkProps> = ({text, service}) => {
 
   return (
       <button className={"link-container"} onMouseEnter={triggerAnimation}
+              onTouchStart={triggerAnimation}
               onClick={redirectToService}>
         {text}
         <animated.img src={serviceProps.icon} style={iconStyle} className={"link-icon"}/>

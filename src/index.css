@@ -3,6 +3,7 @@ body {
   background-image: linear-gradient(to right, #160042 0%, #12107a 30%, #071228 100%);
   color: #d1e3ef;
   font-family: "Raleway", "Helvetica", sans-serif;
+  overflow: hidden;
 }
 
 @font-face {

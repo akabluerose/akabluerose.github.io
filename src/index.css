@@ -8,7 +8,7 @@ body {
 
 @font-face {
   font-family: "Raleway";
-  src: url("/assets/raleway.ttf")
+  src: url("/raleway.ttf")
 }
 
 #root {
